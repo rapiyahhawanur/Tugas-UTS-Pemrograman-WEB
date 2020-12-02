@@ -1,0 +1,335 @@
+/*animation*/
+@keyframes fly-up{
+	from{
+		opacity: 0;
+		top: 0px;
+	}
+	to{
+		opacity: 1;
+		top: 60px;
+	}
+}
+
+@keyframes side-left{
+	from{
+		left: 100%;
+		opacity: 0;
+	}
+	to{
+		left: 0px;
+		opacity: 1;
+	}
+}
+
+@keyframes side-right{
+	from{
+		right: 100%;
+		opacity: 0;
+	}
+	to{
+		right: 0px;
+		opacity: 1;
+	}
+}
+
+/*master style*/
+body{
+	margin: 0;
+	padding: 0;
+	background: #007bae;
+	font-family: Ubuntu, Roboto, sans-serief;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.container .big-title h1{
+	font-size: 28px;
+	top: 60px;
+	position: relative; 
+	text-align: center; 
+	color: lightseablue;
+	animation-name: fly-up;
+	animation-duration: 1.5s;
+}
+
+/*some hr new style but let's not use it for now,
+it's look weird
+.hr-custom{
+	padding-bottom: 20px;
+	border-bottom: 2px dashed lightseablue;
+}
+*/
+
+
+/*top bar style*/
+.top-bar-wrapper{
+	z-index: 1;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	justify-content: space-between;
+	padding: 20px;
+	background: lightseablue;
+	font-weight: bold;
+	animation-name: side-left;
+	animation-duration: 1.5s;
+}
+
+.top-bar-wrapper .left-area{
+	display: flex;
+}
+
+.top-bar-wrapper .left-area .link-wrapper{
+	margin-right: 15px;
+}
+
+.link-wrapper a{
+	font-size: 0.9em;
+	text-decoration: none;
+	color: #3399CC;
+	padding: 5px;
+	border: 2px dashed transparent;
+}
+
+.link-wrapper a:hover{
+	border: 2px dashed #006994;
+}
+
+/*preview style*/
+
+.preview-items{
+	position: relative;
+	top: 60px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	animation-name: side-right;
+	animation-duration: 1.5s;
+	width: 100%;
+	height: 100%;
+}
+
+.preview-item{
+	background: #ececec;
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+	align-items: center;
+	border: 2px dashed lightseablue;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.preview-item .subtitle{
+	text-transform: uppercase;
+}
+
+.preview-text-logo{
+	margin: 10px;
+	position: relative;
+	color: lightseablue;
+	text-decoration: none;
+	text-align: center;
+}
+
+.preview-text-logo .title{
+	font-size: 0.9em;
+}
+
+.preview-text-logo .subtitle{
+	font-size: 0.8em;
+}
+
+.preview-item:hover{
+	filter: brightness(50%);
+}
+
+/*content style*/
+.content-wrapper{
+	position: relative;
+	top: 60px;
+	animation-name: side-right;
+	animation-duration: 1.5s;
+}
+
+.content{
+	background: #ececec;
+	display: grid;
+	grid-template-columns: 1fr;	
+	margin: 20px;
+	padding: 20px;
+	color: lightseablue;
+	border: 2px dashed lightseablue;
+	padding: 10px;
+}
+
+.content .top-content-wrapper{
+	text-align: center;	
+}
+
+.content .top-content-wrapper .content-img img{
+	border: 2px dashed lightseablue;
+	padding: 5px;
+	animation-name: fly-up;
+	animation-duration: 1.5s;
+}
+
+/*card style begin*/
+
+.card-items{
+	position: relative;
+	width: 100%;
+	top: 60px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	animation-name: side-right;
+	animation-duration: 1.5s;
+}
+
+.card-item{
+	background: #006994;
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+	align-items: center;
+	border: 2px dashed lightseablue;
+	height: 100%;
+}
+
+.card-text-pic{
+	position: relative;
+	color: lightseablue;
+	text-decoration: none;
+	text-align: center;
+}
+
+.card-text-pic .pic img{
+	width: 100px;
+}
+
+.card-text-pic .title{
+	font-size: 0.9em;
+}
+
+.card-text-pic .subtitle p{
+	font-size: 0.9em;
+}
+
+/*card style end*/
+
+
+.sosmed-wrapper{
+	padding-top: 5px;
+}
+
+.sosmed-wrapper a{
+	padding: 10px;
+
+}
+
+.sosmed-wrapper a img{
+	width: 40px;
+}
+
+/*button style begin*/
+
+.button-wrapper{
+	display: flex;
+	justify-content: space-between;
+	top: 90%;
+}
+
+.button a img{
+	width: 50px;
+	height: 50px;
+}
+
+.button:hover{
+	filter: brightness(50%);
+}
+
+/*button style end*/
+.menu-bar{
+    background-color: #006994;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-bar > ul > li {
+    float: left;
+}
+
+
+.menu-bar li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li a:hover{
+    background-color: #87cefa;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown:hover .isi-dropdown {
+    display: block;
+}
+
+.isi-dropdown a:hover {
+    color: rgb(0, 0, 0) !important;
+}
+
+.isi-dropdown {
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #f9f9f9;
+}
+
+.isi-dropdown a {
+    color: #3c3c3c !important;
+}
+
+.isi-dropdown a:hover {
+    color: #232323 !important;
+    background: #f3f3f3 !important;
+}
+#toc_container{
+    background: #f9f9f9;
+    border: 1px solid #87cefa;
+    display: table;
+    font-size: 100%;
+    margin-bottom: 1em;
+    padding: 25px;
+    width: 100%;
+}
+.toc_title
+{
+    font-weight: 700;
+    text-align: center;
+}
+#toc_container li, #toc_container ul, #toc_container ul li
+{
+    list-style: outside none none !important;
+}
